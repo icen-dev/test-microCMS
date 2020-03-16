@@ -1,4 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config()
+const { API_KEY } = process.env
 
 export default {
   mode: 'spa',
@@ -59,7 +61,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -82,5 +84,8 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  env: {
+    API_KEY
   }
 }
