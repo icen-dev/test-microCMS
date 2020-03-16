@@ -39,11 +39,6 @@
 import axios from 'axios'
 
 export default {
-  data () {
-    return {
-      items: []
-    }
-  },
   async asyncData () {
     const { data } = await axios.get(
       'https://icen.microcms.io/api/v1/news',
@@ -53,6 +48,11 @@ export default {
     )
     return {
       items: data.contents
+    }
+  },
+  data () {
+    return {
+      items: []
     }
   },
   methods: {
