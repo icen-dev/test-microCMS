@@ -3,7 +3,7 @@ require('dotenv').config()
 const { API_KEY } = process.env
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
